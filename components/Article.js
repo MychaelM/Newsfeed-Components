@@ -138,8 +138,21 @@ function articleMaker(data) {
   articleDate.classList.add('date');
   expandButton.classList.add('expandButton');
 
+  // add event listener to span
   expandButton.addEventListener('click', () => {
     article.classList.toggle('article-open');
   })
 
+  return article;
+
 }
+
+
+// select articles div in html.index
+const articles = document.querySelector('.articles');
+console.log(articles);
+
+data.map(data => {
+  console.log(data);
+  articles.appendChild(articleMaker(data));
+})
