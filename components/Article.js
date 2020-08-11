@@ -138,4 +138,8 @@ function articleMaker(data) {
   articleDate.classList.add('date');
   expandButton.classList.add('expandButton');
 
+  expandButton.addEventListener('click', () => {
+    article.classList.toggle('article-open');
+  })
+
 }
