@@ -138,6 +138,14 @@ function articleMaker(data) {
   articleDate.classList.add('date');
   expandButton.classList.add('expandButton');
 
+  // add content
+  articleTitle.textContent = data.title;
+  articleDate.textContent = data.date;
+  articleP1.textContent = data.firstParagraph;
+  articleP2.textContent = data.secondParagraph;
+  articleP3.textContent = data.thirdParagraph;
+  expandButton.textContent = '+';
+
   // add event listener to span
   expandButton.addEventListener('click', () => {
     article.classList.toggle('article-open');
